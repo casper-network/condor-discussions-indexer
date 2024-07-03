@@ -61,5 +61,3 @@ Comments: [
   }
 ]
 ```
-
-The comments, and whether or not they are labeled as the answer, are in `comments.nodes`.
