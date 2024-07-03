@@ -10,12 +10,6 @@ cd condor-discussions-indexer
 npm install
 ```
 
-Open the template _.env_ file:
-
-```bash
-nano .env
-```
-
 [Create a Personal Access Token through GitHub](https://github.com/settings/tokens/new), providing access only to `read:discussion`.
 
 Create a new _.env_ file:
