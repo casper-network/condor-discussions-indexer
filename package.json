@@ -1,0 +1,20 @@
+{
+  "name": "github-indexer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "get-discussion": "node src/get_discussion.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/graphql": "^8.1.1",
+    "@octokit/rest": "^21.0.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "octokit": "^4.0.2"
+  }
+}
