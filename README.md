@@ -32,26 +32,28 @@ GITHUB_PAT=ghp_sgaSFSjBzf7ltXqWj6Y87ljFRgrOyt0ziIYy
 
 ## Run
 
+First, create a file _usernames.txt_ in the project root:
+
+```bash
+touch usernames.txt
+```
+
+and populate it with one user to track per line:
+
+_Example:_
+
+```
+dylanireland
+sczembor
+melpadden
+```
+
+The output will only consist of the users listed in the _usernames.txt_ file.
+
 Get a discussion post by providing the discussion number:
 
 ```bash
 npm run get-discussion 19
 ```
 
-Output:
-
-```
-Original Question: {
-  title: 'How to get AddressableEntity?',
-  body: 'How to get the AddressableEntity of a wallet, smart contract in a transaction data?'
-}
-Comments: [
-  {
-    id: 'DC_kwDOMD2G484AlsVm',
-    bodyText: 'AddressableEntity is the new way to refer to both accounts and contracts. Contracts are represented by entity-contract-<hash>, and accounts by either entity-account-<hash> or their public key in the transaction data. You can obtain the transaction data using this query:casper-client get-transaction <transaction_hash> -n <node_address>',
-    author: { login: 'sczembor' },
-    createdAt: '2024-06-26T09:58:14Z',
-    isAnswer: false
-  }
-]
-```
+The script will create a CSV file named _discussions\_`{DISCUSSION_NUMBER}`.csv_ containing each comment as a row of data.
